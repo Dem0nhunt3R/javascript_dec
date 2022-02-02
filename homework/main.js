@@ -90,7 +90,8 @@ isLeapYear(2004);
 // - Використовуючи конструкцію if..else, напишіть код, який запитуватиме: „Яка «офіційна» назва JavaScript?“
 // Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!
 const officialName = prompt('Яка «офіційна» назва JavaScript?');
+
 if (officialName === 'ECMAScript')
-    alert('Correct')
+    alert('Correct');
 else
-    alert('Не знаєте? ECMAScript!')
+    alert('Не знаєте? ECMAScript!');
