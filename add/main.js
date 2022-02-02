@@ -36,13 +36,16 @@ function isMiddle(a, b, c) {
 // }
 
 let a1 = 3, b1 = 2;
-let result = (a1 + b1) < 4 ? 'not enought' : 'too much';
+let result = (a1 + b1) < 4 ? 'not enough' : 'too much';
 console.log(result);
 
 // - Маємо будь яке число від -100 , 0 , +100 потрібно перевірити яким є число: позитивним, негативним або нулем
 // напишіть це тернарним оператором
 
-let num = -99;
-
-console.log('Number ' + num + ' ' +
-    ((num <= 100 && num > 0) ? ' more than 0' : (num < 0 && num >= -100) ? ' less than 0' : ' equals 0'));
+let num = -100;
+if (num <= 100 && num >= -100) {
+    console.log('Number ' + num + ' ' +
+        ((num <= 100 && num > 0) ? ' more than 0' : (num < 0 && num >= -100) ? ' less than 0' : ' equals 0'));
+} else {
+    console.log('Number ' + num + ' is more than 100 or less than -100');
+}
