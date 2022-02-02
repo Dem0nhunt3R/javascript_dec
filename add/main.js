@@ -42,10 +42,10 @@ console.log(result);
 // - Маємо будь яке число від -100 , 0 , +100 потрібно перевірити яким є число: позитивним, негативним або нулем
 // напишіть це тернарним оператором
 
-let num = -100;
+let num = 0;
 if (num <= 100 && num >= -100) {
     console.log('Number ' + num + ' ' +
-        ((num <= 100 && num > 0) ? ' more than 0' : (num < 0 && num >= -100) ? ' less than 0' : ' equals 0'));
+        ((num <= 100 && num > 0) ? ' is more than 0' : (num < 0 && num >= -100) ? ' is less than 0' : ' is equals 0'));
 } else {
     console.log('Number ' + num + ' is more than 100 or less than -100');
 }
