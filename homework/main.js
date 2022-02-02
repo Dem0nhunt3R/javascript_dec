@@ -19,9 +19,9 @@ currentTime(time);
 
 //- У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 
-const time2 = Math.floor(Math.random() * 30 + 1);
+const randomDecade = Math.floor(Math.random() * 30 + 1);
 
-const currentDecade = (decade) => {
+const calcCurrentDecade = (decade) => {
     if (decade >= 1 && decade < 11)
         console.log('1 decade => ' + decade);
     else if (decade >= 11 && decade < 21)
@@ -30,7 +30,7 @@ const currentDecade = (decade) => {
         console.log('3 decade => ' + decade);
 }
 
-currentDecade(time2);
+calcCurrentDecade(randomDecade);
 
 // - У нас є змінна test, якщо  не дорівнює true, виведіть 'Вірно', інакше виведіть 'Неправильно'.
 //     Перевірте роботу скрипта при test, що дорівнює true, false. Напишіть два варіанти скрипта - з коротким записом(тернаркою)
