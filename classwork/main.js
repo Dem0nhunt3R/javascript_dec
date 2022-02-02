@@ -18,16 +18,16 @@ getMax(3333, 33333);
 // Користувач вводить номер квартири просто в змінні або через prompt('') .
 //     Програма повинна зазначити, в якому під'їзді знаходиться дана квартира.
 
-const appartmentNumber = prompt('Enter the number of your appartmet');
+const apartmentNumber = prompt('Enter the number of your apartment');
 
 switch (true) {
-    case (appartmentNumber >= 1 && appartmentNumber < 21):
-        alert('fisrt entrance');
+    case (apartmentNumber >= 1 && apartmentNumber < 21):
+        alert('first entrance');
         break;
-    case (appartmentNumber >= 21 && appartmentNumber < 49):
+    case (apartmentNumber >= 21 && apartmentNumber < 49):
         alert('second entrance');
         break;
-    case (appartmentNumber >= 49 && appartmentNumber < 91):
+    case (apartmentNumber >= 49 && apartmentNumber < 91):
         alert('third entrance');
         break;
     default:
@@ -37,7 +37,7 @@ switch (true) {
 //- Ми маємо змінну number в яку користувач задає числове значення,  якщо змінна рівна 10 вивести повідомлення ВІРНО,
 // якщо змінна не рівна 10 - тоді НЕВІРНО
 
-const number = +prompt();
+const number = +prompt('10?');
 
 alert(number === 10 ? 'true' : 'false');
 
@@ -45,7 +45,7 @@ alert(number === 10 ? 'true' : 'false');
 //     якщо в змінну записали стрінгу вивести 2, якщо булеве значення - 3, якщо об'єкт або масив - 3.
 // якщо в змінну записали щось інше, спрацьовує else
 
-const x = '1';
+const x = true;
 
 if (typeof x === 'number')
     console.log(1);
@@ -53,13 +53,16 @@ else if (typeof x === 'string')
     console.log(2);
 else if (typeof x === 'object')
     console.log(3);
+else if (typeof x === 'boolean') {
+    console.log(4);
+}
 else
     console.log('else');
 
 // - Задача-гра "чи ми йдемо сьогодні в OKTEN на навчання?".
 //     Змінна, яка характеризує температуру. Якщо температура від +10 до +22 вивести повідомлення що ми йдемо ВЧИТИСЯ .
 //     Якщо інша темпаретура, тоді виводимо повідомлення що сидимо вдома і вчимося ОНЛАЙН
-temperature(prompt('Entet the T'));
+temperature(prompt('Enter the T'));
 
 function temperature(x) {
     switch (true) {
@@ -79,19 +82,19 @@ getPrize(+prompt('enter a number'));
 
 function getPrize(x) {
     switch (true) {
-        case x===1:
+        case x === 1:
             console.log('car');
             break;
-        case x===2:
+        case x === 2:
             console.log('moto');
             break;
-        case x===3:
+        case x === 3:
             console.log('mobile');
             break;
-        case x===4:
+        case x === 4:
             console.log('and');
             break;
-        case x===5 :
+        case x === 5 :
             console.log('etc');
             break;
         default:

@@ -3,18 +3,17 @@
 const time = Math.floor(Math.random() * 59 + 1);
 
 const currentTime = (time) => {
-    if (time >= 1 && time < 16) {
+    if (time >= 1 && time < 16)
         console.log('1 half => ' + time);
-    } else if (time >= 16 && time < 30)
+    else if (time >= 16 && time < 30)
         console.log('2 half => ' + time);
-    else if
-    (time >= 30 && time < 45)
+    else if (time >= 30 && time < 45)
         console.log('3 half => ' + time);
     else if (time >= 45 && time < 60)
         console.log('4 half => ' + time);
-    else if (time === 0) {
+    else if (time === 0)
         console.log('time = 0')
-    }
+
 }
 currentTime(time);
 
@@ -23,23 +22,12 @@ currentTime(time);
 const time2 = Math.floor(Math.random() * 30 + 1);
 
 const currentDecade = (decade) => {
-    if (decade >= 1 && decade < 11) {
+    if (decade >= 1 && decade < 11)
         console.log('1 decade => ' + decade);
-    } else if (decade >= 11 && decade < 21) {
+    else if (decade >= 11 && decade < 21)
         console.log('2 decade => ' + decade);
-    } else if (decade >= 21 && decade < 31) {
+    else if (decade >= 21 && decade < 31)
         console.log('3 decade => ' + decade);
-    }
-    // switch (decade) {
-    //     case (decade >= 1 && decade < 11) :
-    //         console.log('1 decade => ' + decade);
-    //     case (decade >= 11 && decade < 21) :
-    //         console.log('2 decade => ' + decade);
-    //     case (decade >= 21 && decade < 31) :
-    //         console.log('3 decade => ' + decade);
-    // default:
-    //     console.log('0')
-    // }
 }
 
 currentDecade(time2);
@@ -48,7 +36,7 @@ currentDecade(time2);
 //     Перевірте роботу скрипта при test, що дорівнює true, false. Напишіть два варіанти скрипта - з коротким записом(тернаркою)
 
 const test = true;
-console.log('Test is ' + (test ? 'true' : 'false'))
+console.log('Test is ' + (test ? 'false' : 'true'))
 
 //- Якщо змінна a не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
 const notZero = (min, max) => {
@@ -63,29 +51,29 @@ isTrue(notZero(-3, 1));
 //- Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається
 // інфа що заплановано на цей день.
 
-const day = 'Wednesday';
+const day = +prompt('Enter a day number');
 
 switch (day) {
-    case 'Monday':
-        console.log(day);
+    case 1:
+        console.log('Monday');
         break;
-    case 'Tuesday':
-        console.log(day);
+    case 2:
+        console.log('Tuesday');
         break;
-    case 'Wednesday':
-        console.log(day);
+    case 3:
+        console.log('Wednesday');
         break;
-    case 'Thursday':
-        console.log(day);
+    case 4:
+        console.log('Thursday');
         break;
-    case 'Friday':
-        console.log(day);
+    case 5:
+        console.log('Friday');
         break;
-    case 'Saturday':
-        console.log(day);
+    case 6:
+        console.log('Saturday');
         break;
-    case 'Sunday':
-        console.log(day);
+    case 7:
+        console.log('Sunday');
         break;
     default:
         console.log('Wrong day');
@@ -96,13 +84,13 @@ switch (day) {
 const isLeapYear = (year) => {
     console.log('The year is ' + ((year % 4 === 0) ? 'leap' : 'not leap'));
 }
+
 isLeapYear(2004);
 
 // - Використовуючи конструкцію if..else, напишіть код, який запитуватиме: „Яка «офіційна» назва JavaScript?“
 // Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!
 const officialName = prompt('Яка «офіційна» назва JavaScript?');
-if (officialName === 'ECMAScript') {
+if (officialName === 'ECMAScript')
     alert('Correct')
-} else {
-    alert('Not correct')
-}
+else
+    alert('Не знаєте? ECMAScript!')

@@ -42,6 +42,7 @@ console.log(result);
 // - Маємо будь яке число від -100 , 0 , +100 потрібно перевірити яким є число: позитивним, негативним або нулем
 // напишіть це тернарним оператором
 
-let num = 100;
+let num = -99;
 
-console.log('Number ' + num + ' ' + ((num <= 100 && num > 0) ? ' more than 0' : (num < 0 && num >= -100) ? ' less than 0' : ' equals 0'));
+console.log('Number ' + num + ' ' +
+    ((num <= 100 && num > 0) ? ' more than 0' : (num < 0 && num >= -100) ? ' less than 0' : ' equals 0'));
