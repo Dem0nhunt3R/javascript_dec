@@ -1,25 +1,26 @@
-#wrap{
+.wrap{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 5px;
 }
 
-#wrap>div{
+.wrap>div{
     width: 18%;
     background-color: greenyellow;
     border: 2px solid black;
 }
 
-#usersBox{
+.users-box{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     row-gap: 10px;
 }
 
-#usersBox>div{
+.users-box>div{
     width: 45%;
     background-color: aquamarine;
     border: 2px solid black;
+    text-align: center;
 }

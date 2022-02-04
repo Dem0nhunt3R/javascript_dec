@@ -842,15 +842,16 @@ const usersArr = [
 /*За допомогою циклу вивести всю інформацію про пости використовуючи шаблон Template 1.1.
 * ЗА допомоги стилів побудувати структуру "сітки" по 5 об'єктів в лінію* */
 
-const wrap = document.querySelector('#wrap');
+const wrap = document.createElement('div');
+wrap.setAttribute('class', 'wrap');
+document.body.append(wrap);
 for (const post of usersArr) {
     let postCard = document.createElement('div');
     let h3 = document.createElement('h3');
     let p = document.createElement('p');
     h3.innerText = post.id + ' - ' + post.title;
-    p.innerText = post.body
-    postCard.appendChild(h3);
-    postCard.appendChild(p);
+    p.innerText = post.body;
+    postCard.append(h3, p);
     wrap.appendChild(postCard);
 }
 
@@ -1105,7 +1106,10 @@ let usersList = [
 //
 //     </div>
 //
-const usersBox = document.querySelector('#usersBox');
+
+const usersBox = document.createElement('div');
+usersBox.setAttribute('class','users-box');
+document.body.append(usersBox);
 
 for (const user of usersList) {
     let userBlock = document.createElement('div');
@@ -1122,9 +1126,9 @@ for (const user of usersList) {
     let street = document.createElement('p');
     street.innerText = 'street - ' + user.address.street;
     let suite = document.createElement('p');
-    suite.innerText ='suite - '+ user.address.suite;
+    suite.innerText = 'suite - ' + user.address.suite;
     let zipCode = document.createElement('p');
-    zipCode.innerText = 'zip code - '+user.address.zipcode;
+    zipCode.innerText = 'zip code - ' + user.address.zipcode;
     addressBlock.append(city, street, suite, zipCode);
     usersBox.append(userBlock);
 }
