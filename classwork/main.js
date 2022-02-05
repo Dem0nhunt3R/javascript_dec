@@ -208,6 +208,7 @@ for (const simpson of simpsons) {
     const simpsonImg = document.createElement('img');
     simpsonInfo.innerText = `Name - ${simpson.name}, Surname - ${simpson.surname}, Age - ${simpson.age}, Info - ${simpson.info}`;
     simpsonImg.src = simpson.photo;
+    simpsonImg.setAttribute('alt',`Image of ${simpson.name}`);
     simpsonCard.append(simpsonInfo, simpsonImg);
     simpsonsBox.append(simpsonCard);
 }
@@ -234,9 +235,10 @@ for (const simpson of simpsons) {
     simpsonNamAge.innerText = simpson.name + ' ' + simpson.surname + '. Age is ' + simpson.age;
     const simpsonInfo = document.createElement('p');
     simpsonInfo.innerText = simpson.info;
-    const simpsonPhoto = document.createElement('img');
-    simpsonPhoto.src = simpson.photo;
-    simpsonCard2.append(simpsonNamAge, simpsonInfo, simpsonPhoto);
+    const simpsonImg = document.createElement('img');
+    simpsonImg.src = simpson.photo;
+    simpsonImg.setAttribute('alt',`Image of ${simpson.name}`);
+    simpsonCard2.append(simpsonNamAge, simpsonInfo, simpsonImg);
 }
 
 
