@@ -1,0 +1,33 @@
+.simpsons-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 10px;
+}
+
+.simpsons-box > div {
+    width: 45%;
+    border: 5px solid black;
+}
+
+.simpsons-box img {
+    width: 200px;
+    margin-left: 100px;
+}
+
+.products-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+}
+
+.products-box >div{
+    border: 5px solid black;
+    width: 35%;
+    text-align: center;
+}
+
+.product-image{
+    height: 300px;
+}
