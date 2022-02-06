@@ -124,18 +124,14 @@ console.log(fillArray2(1));
 
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
 
-const arr2 = [1,2,3];
+const arr2 = [1, 2, 3, 4, 5, 6, 7];
 
 function reverse(arr) {
-    let tempNum;
-    for (let i = 0; i < arr.length - 1; i++) {
-        for (let j = 1; j < arr.length; j++) {
-            tempNum = arr[j];
-            arr[j] = arr[i];
-            arr[i] = tempNum;
-        }
+    let newArr = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        newArr.push(arr[i]);
     }
-    return arr;
+    return newArr;
 }
 
 console.log(reverse(arr2));
