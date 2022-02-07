@@ -1,11 +1,13 @@
 // - Дано список імен.
-let n1 = 'Harry..Potter--Uddd....Wertddd--Uptersad'
-let n2 = 'Ron--- Whisley'
-let n3 = 'Hermione__Granger-Ope'
 // Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
 // let n1 = 'Harry Potter'
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
+
+let n1 = 'Harry..Potter--Uddd....Wertddd--Uptersad';
+let n2 = 'Ron--- Whisley';
+let n3 = 'Hermione__Granger-Ope';
+
 const normalizeName = (str) => {
     str = str.replace(/[^a-zа-яё]/gi, '');
     let counter = str.length;
@@ -18,6 +20,7 @@ const normalizeName = (str) => {
     }
     return newStr.reverse().join(' ');
 }
+
 console.log(normalizeName(n1));
 console.log(normalizeName(n2));
 console.log(normalizeName(n3));
