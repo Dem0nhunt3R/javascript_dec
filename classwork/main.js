@@ -4,18 +4,33 @@
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
 
-let n1 = 'Harry..Potter--Uddd....Wertddd--Uptersad';
+let n1 = 'Harry..Potter=Uddd....Wertddd--Uptersad';
 let n2 = 'Ron---Whisley';
 let n3 = 'Hermione__Granger-Ope';
 
 const normName = (str) => {
-    const mySplit = str.trim().split(' ');
-    console.log(mySplit)
-    return mySplit.join(' ');
+    let newStr = '';
+    const symbols = '!@#$%^&*()_+=-0987654321?/.,';
+    for (const symbol of symbols) {
+        if (str.includes(symbol)) {
+            str = str.replaceAll(symbol, ' ');
+        }
+    }
+    str = str.split(' ');
+    for (let i = 0; i < str.length; i++) {
+        const item = str[i];
+        if (i === (str.length - 1))
+            newStr += item;
+        else if (item.length > 0) {
+            newStr += item + ' ';
+        }
+
+    }
+    return newStr;
 }
-// console.log(normName(n1));
+console.log(normName(n1));
 console.log(normName(n2));
-// console.log(normName(n3));
+console.log(normName(n3));
 
 // //     - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
 //

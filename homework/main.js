@@ -46,6 +46,7 @@ const deleteCharacters = (str, length) => {
     return str.split('', length).join('');
 
 }
+console.log(deleteCharacters(str2, 9))
 document.writeln(deleteCharacters(str2, 9));
 
 // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами.
@@ -58,7 +59,7 @@ let str3 = 'HTML JavaScript PHP';
 const insertDash = (str) => {
     return str.split(' ').join('-').toUpperCase();
 }
-
+console.log(insertDash(str3));
 document.writeln(insertDash(str3));
 
 // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
@@ -75,7 +76,7 @@ console.log(firstToUpperCase(str4));
 
 const capitalize = (str) => {
     str = str.split(' ');
-    let newStr = str.map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase()));
+    const newStr = str.map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase()));
     return newStr.join(' ');
 }
 
