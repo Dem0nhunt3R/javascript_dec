@@ -26,7 +26,7 @@ logMax(3, 3333, 444);
 
 // - створити функцію яка повертає найбільше число з масиву
 
-const arr = [1, 2, 3333, 4, 53, 6, 7111, 8, -999999];
+const arr = [-100, 2, 3333, 4, 53, 6, 7111, 8, -99];
 
 function getMax(arr) {
     let maxNumber = arr[0];
@@ -79,21 +79,20 @@ console.log(getAverage(arr))
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
-function getMinShowMax() {
-    const args = arguments;
+function getMinShowMax(...args) {
     let min = args[0];
     let max = args[0];
     for (let i = 0; i < args.length; i++) {
-        if (args[i] > min) {
+        if (args[i] > max) {
             max = args[i];
-        } else
+        } else if (args[i] < min)
             min = args[i];
     }
     console.log(max);
     return min;
 }
 
-console.log(getMinShowMax(2, 2, 3, 2));
+console.log(getMinShowMax(100, -6, 2, 33, 2, -5));
 
 // - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
@@ -128,8 +127,8 @@ const arr2 = [1, 2, 3, 4, 5, 6, 7];
 
 function reverse(arr) {
     let newArr = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        newArr.push(arr[i]);
+    for (let i = arr.length - 1, j = 0; i >= 0; i--, j++) {
+        newArr[j] = arr[i];
     }
     return newArr;
 }

@@ -12,7 +12,7 @@ function circleSqrCalc(r) {
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
-function cylinderSqtCalc(h, r) {
+function cylinderSqrCalc(h, r) {
     return (2 * 3.14 * r * h);
 }
 
