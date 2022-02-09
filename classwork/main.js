@@ -13,6 +13,7 @@ const getMin = (a, b, c) => {
 }
 
 getMin(1, 2, 3);
+
 // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
 
 const getMax = (a, b, c) => {
@@ -26,7 +27,7 @@ const getMax = (a, b, c) => {
     console.log(max);
 }
 
-getMax(333334, 333333333335, 33333336);
+getMax(34, 56, 45);
 
 // - створити функцію яка повертає найбільше число з масиву
 
@@ -39,7 +40,7 @@ const getMaxFromArr = (arr) => {
     return max;
 }
 
-console.log(getMaxFromArr([111111111, 2, 3, 422, -5, 6666666666666666, 71111, 911]));
+console.log(getMaxFromArr([1111, 2, 3, 422, -5, 6666, 71111, 911]));
 
 // - створити функцію яка повертає найменьше число з масиву
 
@@ -52,7 +53,7 @@ const getMinFromArr = (arr) => {
     return min;
 }
 
-console.log(getMinFromArr([-1111111, 2, 3, -4, -1115, 6, -7]));
+console.log(getMinFromArr([-111, 2, 3, -4, -1115, 6, -7]));
 
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
 
@@ -86,14 +87,14 @@ const getMinShowMax = (...args) => {
     for (const num of args) {
         if (num > max)
             max = num;
-        else
+        else if (num < min)
             min = num;
     }
     console.log('Max number is => ' + max);
     return 'Min number is => ' + min;
 }
 
-console.log(getMinShowMax(1, 2, 3, 4, 5));
+console.log(getMinShowMax(7, 2, 6, 4, 5));
 
 // - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
@@ -124,9 +125,9 @@ console.log(randomNumbersArr2(10, 10));
 
 
 const reverseArr = (arr) => {
-    let newArr=[];
-    for (let i = arr.length-1; i>=0 ; i--) {
-        newArr.push(arr[i]);
+    let newArr = [];
+    for (let i = arr.length - 1, ri = 0; i >= 0; i--, ri++) {
+        newArr[ri] = arr[i];
     }
     return newArr;
 }

@@ -6,7 +6,7 @@ const numbersLog = (n) => {
     }
 }
 
-numbersLog(11);
+numbersLog(2);
 
 // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B,
 // или в порядке убывания в противном случае.
@@ -14,16 +14,16 @@ numbersLog(11);
 const numbersLog2 = (a, b) => {
     if (a < b) {
         for (let i = a; i <= b; i++) {
-            console.log(i)
+            console.log('asc ' + i);
         }
-    } else {
+    } else if (a > b) {
         for (let i = a; i >= b; i--) {
-            console.log(i);
+            console.log('des ' + i);
         }
     }
 }
-// numbersLog2(1, 10);
-numbersLog2(10, 5);
+numbersLog2(5, 1);
+numbersLog2(1, 5);
 
 // -   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 //   EXAMPLE:
@@ -48,8 +48,8 @@ const swap = (arr, i) => {
     }
 }
 let arr = [1, 2, 3, 4];
-swap(arr, 3);
-console.log(arr)
+swap(arr, 1);
+console.log(arr);
 
 
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
@@ -59,17 +59,33 @@ console.log(arr)
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
 
-let arr2 = [1,0,6,0,3];
+let arr2 = [0,1, 0, 0, 1, 22, 3, 0, 0, 0, 6, 0, 3];
 
 const allZeroToTheEnd = (arr) => {
     let newArr = [];
-    const filterArr = arr.filter(item => item === 0);
+    let notZeroCount = 0;
+    let zeroCount = 0;
     for (const item of arr) {
-        if (item !== 0)
-            newArr.push(item);
+        if (item === 0) {
+            zeroCount++;
+        } else {
+            newArr[notZeroCount] = item;
+            notZeroCount++;
+        }
     }
-    newArr.push(...filterArr);
+    for (let i = 0, j = newArr.length - 1; i < zeroCount; i++, j++) {
+        newArr[j] = 0;
+    }
     return newArr;
+
+    // const filterArr = arr.filter(item => item === 0);
+    // for (const item of arr) {
+    //     if (item !== 0)
+    //         newArr.push(item);
+    // }
+    // newArr.push(...filterArr);
+    // return newArr;
+
 }
 
 console.log(allZeroToTheEnd(arr2));
