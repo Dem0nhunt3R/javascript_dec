@@ -5,21 +5,8 @@ const classesArray = [];
 function getClassesName(startElement) {
     const children = startElement.children;
     for (const child of children) {
-        if (child.children) {
-            for (const item of child.children) {
-                if (item.children) {
-                    for (const child of item.children) {
-                        if (child.className) {
-                            classesArray.push(child.className.split(' ').join(', '));
-                            getClassesName(child);
-                        }
-                    }
-                }
-                classesArray.push(item.className.split(' ').join(', '));
-                getClassesName(item);
-            }
-        } else {
-            classesArray.push(child.className);
+        if(child.classList){
+            classesArray.push(...child.classList);
             getClassesName(child);
         }
     }
