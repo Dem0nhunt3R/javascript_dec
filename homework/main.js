@@ -43,11 +43,11 @@ document.writeln(stringToArr(str2));
 
 
 const deleteCharacters = (str, length) => {
-    return str.split('', length).join('');
+    return str.substring(0, length);
 
 }
-console.log(deleteCharacters(str2, 9))
-document.writeln(deleteCharacters(str2, 9));
+console.log(deleteCharacters(str2, 6))
+document.writeln(deleteCharacters(str2, 6));
 
 // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами.
 // При цьому всі символи рядка необхідно перевести у верхній регістр.
@@ -75,9 +75,7 @@ console.log(firstToUpperCase(str4));
 // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
 
 const capitalize = (str) => {
-    str = str.split(' ');
-    const newStr = str.map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase()));
-    return newStr.join(' ');
+    return str.split(' ').map(word => word.replace(word.charAt(0), word.charAt(0).toUpperCase())).join(' ');
 }
 
 console.log(capitalize(str2));

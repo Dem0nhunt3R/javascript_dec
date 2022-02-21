@@ -19,7 +19,7 @@ console.log(cutString(str, 3));
 // Протестувати на значеннях
 const email1 = 'someemail@gmail.com';
 const email2 = 'someeMAIL@gmail.com';
-const email3 = 'someeMAIL@i.ua';
+const email3 = 'someeMAIL@iii.ua';
 const email4 = 'some.email@gmail.com';
 //
 // Примітка
@@ -29,13 +29,15 @@ const email4 = 'some.email@gmail.com';
 const nameValidator = (email = '') => {
     email = email.toLowerCase();
     let login;
+    let mailbox;
     if (!email.includes('@')) {
         console.log('Email is not correct');
     }
     let index = 0;
     while (index < email.length) {
         if (email[index] === '@') {
-            login = email.slice(0, index)
+            login = email.slice(0, index);
+            mailbox = email.slice(index);
             if ((email[index + 1] === '.') || (email[index + 2] === '.')) {
                 console.log('Mailbox is not correct');
                 return 'Mailbox error';
@@ -43,7 +45,7 @@ const nameValidator = (email = '') => {
         }
         index++;
     }
-    return login;
+    return login + mailbox;
 }
 
 console.log(nameValidator(email1));
@@ -125,7 +127,7 @@ let coursesArray = [
 // відсортувати його в спадаючому порядку за кількістю елементів в полі modules
 
 const modulesAscSort = (arr) => {
-    return arr.sort((a, b) => (a.modules.length - b.modules.length));
+    return arr.sort((a, b) => (b.modules.length - a.modules.length));
 }
 
 console.log(modulesAscSort(coursesArray));
