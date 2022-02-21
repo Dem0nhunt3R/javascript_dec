@@ -8,24 +8,18 @@ function getClassesName(startElement) {
         if (child.children) {
             for (const item of child.children) {
                 if (item.children) {
-                    childrenMap(item.children);
+                    for (const child of item.children) {
+                        if (child.className) {
+                            classesArray.push(child.className.split(' ').join(', '));
+                            getClassesName(child);
+                        }
+                    }
                 }
-                console.log(item.className);
                 classesArray.push(item.className.split(' ').join(', '));
                 getClassesName(item);
             }
         } else {
             classesArray.push(child.className);
-            getClassesName(child);
-        }
-    }
-}
-
-
-function childrenMap(children) {
-    for (const child of children) {
-        if (child.className) {
-            classesArray.push(child.className.split(' ').join(', '));
             getClassesName(child);
         }
     }
