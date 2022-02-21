@@ -104,10 +104,10 @@ console.log(car2);
 
 
 class Prince {
-    constructor(name, age, findedShoe) {
+    constructor(name, age, founeddShoe) {
         this.name = name;
         this.age = age;
-        this.findedShoe = findedShoe;
+        this.findedShoe = founeddShoe;
     }
 }
 
@@ -126,8 +126,6 @@ for (let i = 1; i <= 10; i++) {
     cinderellas.push(new Cinderella('cinderella #' + i, 20 + i, 30 + i));
 }
 
-console.log(cinderellas);
-
 for (const cinderella of cinderellas) {
     if (cinderella.size === prince.findedShoe) {
         console.log('Look!!!!!!THIS IS A FISH FROM MY DREAMS!!! => ' + cinderella.name);
@@ -135,4 +133,4 @@ for (const cinderella of cinderellas) {
 }
 
 const find = cinderellas.find(cinderella => cinderella.size === prince.findedShoe);
-console.log(find)
+console.log(find);
