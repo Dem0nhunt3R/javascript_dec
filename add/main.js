@@ -10,6 +10,7 @@ function getClassesName(startElement) {
                 if (item.children) {
                     childrenMap(item.children);
                 }
+                console.log(item.className);
                 classesArray.push(item.className.split(' ').join(', '));
                 getClassesName(item);
             }
