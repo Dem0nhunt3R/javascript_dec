@@ -7,6 +7,9 @@ function getClassesName(startElement) {
     for (const child of children) {
         if (child.children) {
             for (const item of child.children) {
+                if (item.children) {
+                    childrenMap(item.children);
+                }
                 classesArray.push(item.className.split(' ').join(', '));
                 getClassesName(item);
             }
@@ -17,5 +20,15 @@ function getClassesName(startElement) {
     }
 }
 
+
+function childrenMap(children) {
+    for (const child of children) {
+        if (child.className) {
+            classesArray.push(child.className.split(' ').join(', '));
+            getClassesName(child);
+        }
+    }
+}
+
 getClassesName(document.body);
-console.log(classesArray)
+console.log(classesArray);
